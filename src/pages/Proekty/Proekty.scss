@@ -1,0 +1,31 @@
+.main-pages {
+    &__tabs {
+        list-style-type: disclosure-closed;
+    }
+    &__tab {
+        font-size: 18px;
+        padding: 10px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all .5s;
+        font-weight: 500;
+
+        &:hover {
+            box-shadow: 3px 3px 20px #367448;
+            border-radius: 10px;
+        }  
+        &_active {
+            background: #367448;
+            color: #f8f9fa;
+            border-radius: 10px;
+        }        
+    }
+
+    &__gallery {
+        display: none;
+
+        &_active {
+            display: block;
+        }
+    }
+}

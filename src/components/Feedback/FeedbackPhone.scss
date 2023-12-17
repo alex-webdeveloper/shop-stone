@@ -1,0 +1,47 @@
+.feedbackPhone {
+    margin-top: 50px;
+    margin-bottom: 120px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #0c2411 !important;
+    text-align: center;
+
+    &__title {
+        font-size: calc(1.3rem + .6vw);
+        color: #f8f9fa;
+    }
+
+    &__btn {
+        display: inline-block;
+        margin: auto;
+        margin-top: 30px;
+        padding: 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        border-radius: 10px;
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+}
+
+.modal {
+    &-dialog {
+        top: 10%;
+    }
+
+    &-header {
+        text-align: center;
+        padding: 30px 40px 30px 40px;
+    }
+
+    &-body {
+        input:first-child {
+            margin-bottom: 20px;
+        }
+
+        input:focus {
+            border: 1px solid #0c2411;
+            box-shadow: 0 0 0 0.25rem lighten($color: #0c2411, $amount: 80);
+        }
+    }
+}

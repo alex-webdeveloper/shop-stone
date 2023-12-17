@@ -1,0 +1,51 @@
+.main-home {
+    padding-bottom: 70px;
+    
+    .block-dark {
+        padding: 120px 20%;
+        margin-bottom: 70px;
+
+        @media (max-width: 767px) {
+            padding: 120px 0;
+        }
+
+        &__title {
+            color: #367448;
+            margin-bottom: 30px;
+            &::after {
+                content: '';
+                display: block;
+                position: relative;
+                width: 50px;
+                height: 1px;
+                background-color: #367448;
+                top: 10px;
+            }
+        }
+        &__subtitle {
+            color: #f8f9fa;
+        }
+
+        .btn {
+            padding: 13px 35px;
+        }
+    }
+
+    .block-light {
+        margin-bottom: 70px;
+
+        &__title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 40px;
+
+            &::after {
+                content: url('./mramor-section.svg');
+                display: block;
+                position: absolute;
+                top: -10px;
+                left: 0;
+            }
+        }
+    }
+}

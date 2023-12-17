@@ -1,0 +1,132 @@
+// header {
+//     background-color: black;
+// }
+// #24110C   #0c2411   #110c24 || #367448(h2)
+$bg-color: #24110C !important;
+$btn-bg: #0c2411;
+$text-light: #f8f9fa;
+$btn-hover: #157347;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #110c24;
+}
+
+.bg-dark {
+    background-color: $bg-color;
+}
+
+.btn {
+    background-color: $btn-bg;
+
+    &:focus-visible, &:active {
+        background-color: $btn-hover;
+    }
+    &:hover {
+        color: darken($color: #f8f9fa, $amount: 10) !important;
+        background-color: $btn-hover;
+        transform: scale(.99);
+    }
+}
+
+.header {
+    .nav-item {
+        white-space: nowrap;
+    }
+
+    .dropdown {
+        
+        &-item.active, a:active {
+            background-color: #367448 !important;
+        }
+    }
+
+}
+
+.main-goods {
+    padding-bottom: 70px;
+
+    &__title {
+        text-align: center;
+        font-size: calc(1.5rem + .9vw);
+    }
+
+    .card {
+        flex-grow: 1;
+    }
+}
+
+.main-pages {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__subtitle {
+        margin-bottom: 30px;
+    }
+
+    &__sign {
+        margin-bottom: 50px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 92px;
+            height: 3px;
+            background-color: #367448;
+            margin-top: 10px;
+        }
+    }
+    &__descr:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    &__text {
+        text-indent: 1.5rem;
+    }
+
+    &__list {
+        list-style-type: disclosure-closed;
+    }
+
+    &__link {
+        color: #367448;
+
+        &:hover {
+            color: lighten($color: #367448, $amount: 20);
+        }
+    }
+
+    &__map {
+        margin-top: 30px;
+    }
+
+    .cards-pages:not(:last-child) {
+        margin-bottom: 70px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+.cards-pages {
+
+    .card {
+        flex-grow: 1;
+    }
+    .card-img-top {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    div[class^="col"] {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+}
+optgroup {
+    background-color: red!important;
+}

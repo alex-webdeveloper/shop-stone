@@ -1,0 +1,22 @@
+.header-home {
+    height: 100vh;
+
+    &__cap {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:  #24110cda;
+    text-transform: uppercase;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    
+    h1 {
+        text-shadow: 3px 3px darken($color: #f8f9fa, $amount: 100);
+        line-height: 1.5;
+    }
+}
+}

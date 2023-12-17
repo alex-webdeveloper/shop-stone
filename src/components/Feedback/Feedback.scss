@@ -1,0 +1,55 @@
+.feedback {
+    padding-top: 120px;
+
+    &__wrapper {
+        // box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    &__title {
+        position: relative;
+        width: max-content;
+        margin: 0 auto 50px auto;
+        text-align: center;
+        text-shadow: 2px 2px #cccccc;
+        &::after {
+            content: url('../../pages/Home/mramor-section.svg');
+            display: block;
+            position: absolute;
+            top: -10px;
+            left: -40px;
+            text-shadow: 2px 2px #cccccc;
+         }
+    }
+    &__block-contakts {
+        input {
+            margin-bottom: 30px;
+        }
+    }
+    &__block-subject {
+        margin-bottom: 10px;
+    }
+
+    &__subject {
+            width: 100%;
+            min-height: 200px;
+            resize: none;
+        }
+    &__block-btn {
+        display: flex;
+    }
+    input, textarea {
+        padding: 10px;
+        width: 100%;
+        overflow: auto;
+        &:focus {
+            outline: 0;
+            border: 1px solid #0c2411;
+            box-shadow: 0 0 0 0.25rem lighten($color: #0c2411, $amount: 80);
+        }
+    }
+    .btn {
+        width: 50%;
+        max-width: 300px;
+        margin-left: auto;  
+    }
+}

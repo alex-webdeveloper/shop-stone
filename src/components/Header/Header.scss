@@ -1,0 +1,18 @@
+.banner {
+    background: url('./header-all-bg.png'), lightgray 50% / cover no-repeat;
+    height: 200px;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+
+    .nav-link {
+        font-size: 14px;
+        
+        span {
+            color: #367448;
+        }
+    }
+}

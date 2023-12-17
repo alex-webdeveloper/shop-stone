@@ -1,0 +1,42 @@
+ .main-product {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__wrapper {
+        box-shadow: 0 4px 8px 0 #110c24;
+    }
+    &__align-block {
+        display: flex;
+        height: 80px;
+        background-color: #0c2411;
+    }
+    &__title {
+        font-size: 24px;
+        color: #f8f9fa;
+        margin: auto;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+    &__img-block {
+        height: 300px;
+        overflow: hidden;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+    div[class*='col-'] {
+        position: relative;
+        padding: 10px;
+    }
+    a {
+        text-decoration: none;
+    }
+    
+ }
