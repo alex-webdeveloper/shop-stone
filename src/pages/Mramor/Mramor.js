@@ -31,12 +31,12 @@ const Mramor = () => {
 		<>
 			<Header title={"Мрамор"} />
 			<main className="main-goods main-goods_mramor">
-			<CardsGoods goods={mramor} modifier={"mramor"} />
-			<FeedbackPhone />
-			<h2 className="main-goods__title mb-5">Галерея изделий из мрамора</h2>
-			<GalleryImg items={images} />
-			<Guarantee />
-			<Feedback />
+				<CardsGoods goods={mramor} modifier={"mramor"} />
+				<FeedbackPhone />
+				<h2 className="main-goods__title mb-5">Галерея изделий из мрамора</h2>
+				<GalleryImg items={images} />
+				<Guarantee />
+				<Feedback />
 			</main>
 			<Footer />
 		</>

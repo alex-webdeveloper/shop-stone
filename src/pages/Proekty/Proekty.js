@@ -114,29 +114,29 @@ const handleClick = (e) => {
 			<main className="main-pages">
 				<Container>
 					<div className="main-pages__block-tabs-images">
-					<div className="main-pages__collapse-block" onClick={handleClick}>
-						<Row>
-						<Col sm='6'>
-							<ul className="main-pages__tabs">
-							{arrGallery.slice(0, 8).map((elem, i) => (
-								<li  key={elem.id} className={"main-pages__tab" + (i === 0 ? ' main-pages__tab_active' : "")} data-target={"#" + elem.id}>{elem.title}</li>
+						<div className="main-pages__collapse-block" onClick={handleClick}>
+							<Row>
+								<Col sm='6'>
+									<ul className="main-pages__tabs">
+									{arrGallery.slice(0, 8).map((elem, i) => (
+										<li  key={elem.id} className={"main-pages__tab" + (i === 0 ? ' main-pages__tab_active' : "")} data-target={"#" + elem.id}>{elem.title}</li>
+									))}
+									</ul>
+								</Col>
+								<Col sm='6'>
+									<ul className="main-pages__tabs">
+									{arrGallery.slice(8).map(elem => (
+										<li key={elem.id} className="main-pages__tab" data-target={"#" + elem.id}>{elem.title}</li>
+									))}
+									</ul>
+								</Col>
+							</Row>
+						</div>
+						<div className="main-pages__galleries">
+							{arrGallery.map((elem, i) => (
+							<div key={elem.id} id={elem.id} className={'main-pages__gallery' + (i === 0 ? ' main-pages__gallery_active' : '')}><GalleryImg items={elem.gallery} /></div>
 							))}
-							</ul>
-						</Col>
-						<Col sm='6'>
-							<ul className="main-pages__tabs">
-							{arrGallery.slice(8).map(elem => (
-								<li key={elem.id} className="main-pages__tab" data-target={"#" + elem.id}>{elem.title}</li>
-							))}
-							</ul>
-						</Col>
-						</Row>
-					</div>
-					<div className="main-pages__galleries">
-						{arrGallery.map((elem, i) => (
-						<div id={elem.id} className={'main-pages__gallery' + (i === 0 ? ' main-pages__gallery_active' : '')}><GalleryImg items={elem.gallery} /></div>
-						))}
-					</div>
+						</div>
 					</div>
 				</Container>
 				<Guarantee />

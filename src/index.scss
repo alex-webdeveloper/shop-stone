@@ -20,6 +20,8 @@ h5 {
 }
 
 .btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: $btn-bg;
 
     &:focus-visible, &:active {

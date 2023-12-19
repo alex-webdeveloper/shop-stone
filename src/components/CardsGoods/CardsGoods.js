@@ -8,7 +8,7 @@ const CardsGoods = ({ goods }) => {
     const [defaultPrice, setDefaultPrice] = useState(Array(goods.length).fill(0));
     const [newPrice, setNewPrice] = useState(Array(goods.length).fill(0));
     const [size, setSize] = useState(Array(goods.length).fill('кв.м'));
-    const [buttonDisabled, setButtonDisabled] = useState(Array(goods.length).fill(true));
+    const [imgTitle, setImgTitle] = useState(Array(goods.length).fill('изделие не выбранно'));
     const goodsSize = { 'Балясины, форма стандартная': 'шт', 'Крошка россыпью': 'тонна', 'Тумба в комплекте': 'шт', 'Поручни': 'п.м' };
 
     const handleChange = (e, i) => {
@@ -23,7 +23,6 @@ const CardsGoods = ({ goods }) => {
         if (label in goodsSize) size2[i] = goodsSize[label];
         else size2[i] = 'кв.м';
         setSize(size2);
-        
 
         let newPrice2 = [...newPrice];
         newPrice2[i] = cost;
@@ -33,10 +32,9 @@ const CardsGoods = ({ goods }) => {
         defaultPrice2[i] = cost;
         setDefaultPrice(defaultPrice2);
 
-        let buttonDisabled2 = [...buttonDisabled];
-        buttonDisabled2[i] = false;
-        setButtonDisabled(buttonDisabled2);
-
+        let imgTitle2 = [...imgTitle];
+        imgTitle2[i] = label;
+        setImgTitle(imgTitle2);
     }
     const handleClickIncrement = (i) => {
         if (!defaultPrice[i]) return;
@@ -79,6 +77,7 @@ const CardsGoods = ({ goods }) => {
                             <div className="cards-goods__wrapper">
                                 <div className="cards-goods__img-block">
                                     <img className="cards-goods__img" src={card.src} alt={card.title} />
+                                    <p className='cards-goods__img-title'>{imgTitle[i]}</p>
                                 </div>
                                 <div className="cards-goods__descr">
                                     <h2 className="cards-goods__title">{card.title}</h2>
@@ -98,7 +97,7 @@ const CardsGoods = ({ goods }) => {
                                         <span id={'cards-goods__number-1' + i} className='cards-goods__number'>{count[i]} {size[i]}</span>
                                         <span onClick={() => handleClickIncrement(i)} className='cards-goods__increment'>+</span>
                                     </div>
-                                    <Button disabled={buttonDisabled[i]} onClick={(e) => handleClick(e, i)} id='cards-goods_add-cart' className='cards-goods__btn'>Добавить в корзину</Button>
+                                    <Button onClick={(e) => handleClick(e, i)} id='cards-goods_add-cart' className='cards-goods__btn'>Добавить в корзину</Button>
                                 </div>
                             </div>
                         </Col>
